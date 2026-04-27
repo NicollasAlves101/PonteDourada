@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamentos - Ponte Dourada</title>
+    <script src="https://unpkg.com/imask"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+    <a href="ponteDourada-pagInicial.html" class="btn-home" title="Voltar para a Página Inicial">
+        <img src="guiaDeEstilos/001-home.png" alt="Home" class="icon-home">
+    </a>
+    <div class="content">
+        <div class="window-container">
+            <div class="content">
+                <div class="logo-box">
+                    <img src="guiaDeEstilos/logo-fundo-laranja.png" alt="Logo Ponte Dourada"
+                        class="logo-img">
+                </div>
+                <div class="login-container">
+                    <h2 class="login-title">Novo Agendamento</h2><br>
+
+                    <form class="login-form">
+
+                        <div class="form-group">
+
+                            <div class="form-group">
+                                <label for="nomeCliente">Nome:</label>
+                                <input type="text" id="nomeCliente" name="nomeCliente" placeholder="Nome completo">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="profissionalId">Profissional:</label>
+                            <select id="profissionalId" name="profissionalId"
+                                style="padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; outline: none;">
+                                <option value="">Selecione o Profissional</option>
+                                <option value="1">Médico</option>
+                                <option value="2">Engenheiro</option>
+                                <option value="3">Gerência</option>
+                            </select>
+                        </div><br>
+
+                        <div class="form-group">
+                            <label for="servicoId">Serviço:</label>
+                            <select id="servicoId" name="servicoId"
+                                style="padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; outline: none;">
+                                <option value="">Selecione o Serviço</option>
+                                <option value="1">Consultoria</option>
+                                <option value="2">Atendimento Médico</option>
+                                <option value="3">Projetos</option>
+                            </select>
+                        </div><br>
+
+                        <div class="form-group">
+                            <label for="dataAgendada">Data e Hora:</label>
+                            <input type="datetime-local" id="dataAgendada" name="dataAgendada">
+                        </div><br>
+
+                        <div class="form-group">
+                            <label for="status">Status:</label>
+                            <select id="status" name="status">
+                                <option value="a">Selecione</option>
+                                <option value="agendado">Agendado</option>
+                                <option value="confirmado">Confirmado</option>
+                                <option value="em_atendimento">Em Atendimento</option>
+                                <option value="concluido">Concluído</option>
+                                <option value="cancelado">Cancelado</option>
+                            </select>
+                        </div><br>
+                        <input type="button" value="Salvar" class="btn-login" onclick="salvarAgendamento()">
+                    </form>
+                </div>
+
+            </div>
+        </div>
+</body>
+
+</html>

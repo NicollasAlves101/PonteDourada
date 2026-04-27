@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>Teste - Produtos</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+    <a href="ponteDourada-pagInicial.html" class="btn-home" title="Voltar para a Página Inicial">
+        <img src="guiaDeEstilos/001-home.png" alt="Home" class="icon-home">
+    </a>
+    <div class="window-container">
+        <div class="content">
+            <div class="logo-box">
+                <img src="guiaDeEstilos/logo-fundo-laranja.png" alt="Logo Ponte Dourada" class="logo-img">
+            </div>
+
+            <div class="content">
+                <div class="login-container">
+                    <h2 class="login-title">Novo Produto</h2>
+
+                    <form class="login-form">
+                        <div class="form-group">
+                            <label>Nome:</label>
+                            <input type="text" size="20" id="nomeProduto">
+                        </div><br>
+
+                        <div class="form-group">
+                            <label>Tipo:</label>
+                            <select id="tipoProduto">
+                                <option>Selecione</option>
+                                <option>Engenharia (Obras, EPIs)</option>
+                                <option>Medicina (Equipamentos, Insumos)</option>
+                            </select>
+                        </div><br>
+
+                        <div class="form-group">
+                            <label>Fornecedor:</label>
+                            <select id="fornecedorProduto">
+                                <option value="1">Selecione</option>
+                                <option value="2">Construmax (Engenharia)</option>
+                                <option value="3">MedTech (Medicina)</option>
+                            </select>
+                        </div><br>
+                    </form>
+                    <input type="button" value=" Salvar " class="btn-login" onclick="salvarProduto()">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

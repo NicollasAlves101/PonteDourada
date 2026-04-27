@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>Teste - Serviços</title>
+    <script src="https://unpkg.com/imask"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+    <a href="ponteDourada-pagInicial.html" class="btn-home" title="Voltar para a Página Inicial">
+        <img src="guiaDeEstilos/001-home.png" alt="Home" class="icon-home">
+    </a>
+    <div class="window-container">
+        <div class="content">
+            <div class="logo-box">
+                <img src="guiaDeEstilos/logo-fundo-laranja.png" alt="Logo Ponte Dourada" class="logo-img">
+            </div>
+            <div class="content">
+                <div class="login-container">
+                    <h2 class="login-title">Novo Serviço</h2><br>
+
+                    <form class="login-form">
+                        <div class="form-group">
+                            <label>Nome do Serviço:</label>
+                            <input type="text" id="nomeServico" placeholder="Ex: Consulta Clínica, Vistoria de Obra...">
+                        </div><br>
+
+                        <div class="form-group">
+                            <label>Valor Base (R$):</label>
+                            <input type="number" id="valorBase" placeholder="Valor" step="0.01">
+                        </div><br>
+
+                        <input type="button" value="Salvar" class="btn-login" onclick="salvarServico()">
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

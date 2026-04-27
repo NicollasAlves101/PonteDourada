@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastros - Ponte Dourada</title>
+    <script src="https://unpkg.com/imask" defer></script>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <a href="ponteDourada-pagInicial.html" class="btn-home" title="Voltar para a Página Inicial">
+        <img src="guiaDeEstilos/001-home.png" alt="Home" class="icon-home">
+
+    </a>
+    <div class="window-container">
+        
+        <div class="content">
+            <div class="logo-box">
+                <img src="guiaDeEstilos/logo-fundo-laranja.png" alt="Logo Ponte Dourada" class="logo-img">
+            </div>
+
+            <div class="content">
+
+                <div class="login-container" style="margin-bottom: 40px;">
+                    <h2 class="login-title">Cadastro de Fornecedor</h2><br>
+                    <form class="login-form">
+                        <div class="form-group">
+                            <label for="razaoSocial">Razão Social:</label><br>
+                            <input type="text" id="razaoSocial" name="razaoSocial" placeholder="Ex: Ponte Dourada LTDA">
+                        </div><br>
+                        <div class="form-group">
+                            <label for="cnpj">CNPJ:</label><br>
+
+                            <input type="text" id="cnpj" name="cnpj" placeholder="00.000.000/0000-00">
+                            <script src="https://unpkg.com/imask"></script>
+                        </div><br>
+                         <input type="button" value=" Salvar " class="btn-login" onclick="salvarFornecedor()">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+var cnpjMask = IMask(document.getElementById('cnpj'), {
+    mask: '00.000.000/0000-00'
+});
+function salvarFornecedor() {
+    // Pegando os valores dos campos
+    let razaoSocial = document.getElementById("razaoSocial").value;
+    let cnpj = document.getElementById("cnpj").value;
+
+    // Validação simples
+    if (razaoSocial === "" || cnpj === "") {
+        alert("Por favor, preencha todos os campos!");
+        return;
+    }
+     let fornecedor = {
+        razaoSocial: razaoSocial,
+        cnpj: cnpj
+    };   
+    alert("Fornecedor cadastrado com sucesso!");    
+    document.getElementById("razaoSocial").value = "";
+    document.getElementById("cnpj").value = "";
+}
+
+</script>
+</body>

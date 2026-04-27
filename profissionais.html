@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Ponte Dourada</title>
+    <script src="https://unpkg.com/imask"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+    <a href="ponteDourada-pagInicial.html" class="btn-home" title="Voltar para a Página Inicial">
+        <img src="guiaDeEstilos/001-home.png" alt="Home" class="icon-home">
+    </a>
+    <div class="window-container">
+        <div class="content">
+            <div class="logo-box">
+                <img src="guiaDeEstilos/logo-fundo-laranja.png" alt="Logo Ponte Dourada" class="logo-img">
+            </div><br>
+
+            <div class="login-container">
+
+                <h2 class="login-title">Cadastro de Profissional</h2>
+                <form class="login-form"><br>
+                    <div class="form-group">
+                        <label for="nomeProfissional">Nome:</label><br>
+                        <input type="text" id="nomeProfissional" name="nomeProfissional" placeholder="Nome completo">
+                    </div><br>
+                    <div class="form-group">
+                        <label for="cpf">CPF:</label>
+                        <input type="text" id="cpf" name="cpfProfissional" placeholder="000.000.000-00">
+                    </div><br>
+                    <div class="form-group">
+                        <label for="tipoProfissional">Tipo de Profissional:</label>
+                        <input type="text" id="tipoProfissional" name="tipoProfissional"
+                            placeholder="Ex: Engenheiro, médico">
+                    </div><br>
+                    <div class="form-group">
+                        <label for="conselhoRegistro">Conselho/Registro:</label>
+                        <input type="text" id="conselhoRegistro" name="conselhoRegistro"
+                            placeholder="Ex: CRM,CREA, etc">
+                    </div><br>
+                    <input type="button" value="Salvar " class="btn-login" onclick="salvarProfissional()">
+                </form>
+            </div>
+
+</body>

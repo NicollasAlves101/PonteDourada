@@ -1,0 +1,238 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(#FB4E37,#FDA69B);
+;
+}
+
+
+.window-container {
+    width: 90%;             
+    max-width: 1000px;
+    border: 2px solid #000;
+    padding: 20px;          
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+.window-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #000;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.close-btn {
+    color: red;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+.subtitle {
+    color: #0c0c0c;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.logo-img {
+    max-width: 100%;
+    /* A imagem nunca vai ultrapassar a largura do container */
+    height: auto;
+    /* Faz com que a altura se ajuste automaticamente, mantendo a proporção */
+    max-height: 120px;
+    /* Limita a altura máxima para manter a estética do seu desenho */
+    object-fit: contain;
+    /* Garante que a imagem inteira caiba no espaço sem ser cortada ou distorcida */
+}
+
+.logo-text {
+    background: white;
+    padding: 5px 15px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+/* Container do Grid manipulado pelo JS */
+.menu-grid {
+    display: grid;
+    /* Aqui está a mágica: cria 3 colunas de tamanhos iguais */
+    grid-template-columns: repeat(3, 1fr);
+
+    /* Espaçamento vertical e horizontal entre os ícones */
+    gap: 40px;
+
+    /* Centraliza o conteúdo de cada item dentro da sua coluna */
+    justify-items: center;
+
+    padding-bottom: 40px;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+.icon-box {
+    width: 80px;
+    height: 60px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.menu-item span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+select {    
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+.form-group input[type="datetime-local"] ,[type="date"] {
+    width: 100%; /* Ocupa a largura disponível */
+    max-width: 300px; /* Evita que fique largo demais em telas grandes */
+    padding: 10px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+.form-group{
+    .form-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Branco levemente transparente */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidade */
+    max-width: 450px;
+    margin: 20px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilo para os inputs (CPF, Profissão, etc) */
+input[type="text"] , [type="number"] ,[type=password] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho do campo */
+}
+
+/* Estilo para as etiquetas (labels) */
+label {
+    font-weight: bold;
+    color: #333;
+    display: block;
+}
+
+/* Estilo para o botão Salvar */
+.button {
+    background-color: #FF4500; 
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background-color: #E63E00;
+}
+}
+.btn-login {
+    background: linear-gradient(135deg, #FF4500 0%, #FF6347 100%);
+    color: white;    
+    padding: 12px 40px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+    /* Bordas e Sombras */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 69, 0, 0.3);
+    transition: all 0.3s ease;
+    display: block;
+    margin: 20px auto; 
+}
+.btn-login:hover {
+    background: linear-gradient(135deg, #FF6347 0%, #FF4500 100%);
+    transform: translateY(-3px); /* Sobe um pouquinho */
+    box-shadow: 0 6px 15px rgba(255, 69, 0, 0.4);
+}
+
+/* Efeito ao clicar (Active) */
+.btn-login:active {
+    transform: translateY(1px); /* Afunda levemente ao clicar */
+    box-shadow: 0 2px 5px rgba(255, 69, 0, 0.2);
+}
+
+/* =========================================
+   ESTILO DO BOTÃO HOME (Canto Superior Direito)
+   ========================================= */
+
+.btn-home {
+    position: absolute; 
+    top: 20px;          
+    right: 20px;        
+    z-index: 1000;      
+    text-decoration: none;
+    transition: transform 0.3s ease; 
+}
+
+.icon-home {
+    width: 40px;        
+    height: auto;
+    cursor: pointer;
+    
+}
+
+
+.btn-home:hover {
+    transform: scale(1.15); 
+}
