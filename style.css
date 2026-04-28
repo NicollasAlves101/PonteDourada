@@ -119,24 +119,29 @@ body {
     color: #333;
 }
 
-select {    
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    outline: none;
-}
-.form-group input[type="datetime-local"] ,[type="date"] {
-    width: 100%; /* Ocupa a largura disponível */
-    max-width: 300px; /* Evita que fique largo demais em telas grandes */
-    padding: 10px 15px;
-    border: 2px solid #ddd;
+select {
+    appearance: none; /* Remove a seta padrão */
+    -webkit-appearance: none;
+    -moz-appearance: none;    
+    padding: 10px 40px 10px 15px; /* Espaço extra na direita para a nova seta */
+    border: 2px solid #e0e0e0;
     border-radius: 8px;
+    background-color: #ffffff;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="%23666" d="M5 7l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 18px;    
     font-size: 16px;
     color: #333;
-    background-color: #fff;
-    outline: none;
-    transition: border-color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
 }
+
+select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
 .form-group{
     .form-container {
     background-color: rgba(255, 255, 255, 0.9); /* Branco levemente transparente */
@@ -148,9 +153,24 @@ select {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+input[type="text"], 
+input[type="datetime-local"], [type="date"], [type="number"],
+select {
+    width: 100%;            /* Faz o campo ocupar toda a largura do container */
+    max-width: 500px;       /* Define um limite máximo para não ficar largo demais em telas grandes */
+    box-sizing: border-box; /* IMPORTANTE: garante que o padding não aumente o tamanho total do campo */
+    
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-top: 5px;        /* Espaço entre a label e o campo */
+    outline: none;
+}
 /* Estilo para os inputs (CPF, Profissão, etc) */
-input[type="text"] , [type="number"] ,[type=password] {
-    width: 100%;
+input [type=password] {
+    width: 60%;
+    max-width: 500px;
     padding: 12px;
     margin-top: 8px;
     margin-bottom: 20px;
@@ -159,14 +179,22 @@ input[type="text"] , [type="number"] ,[type=password] {
     box-sizing: border-box; /* Garante que o padding não aumente o tamanho do campo */
 }
 
-/* Estilo para as etiquetas (labels) */
 label {
+    display: block;         /* Faz a label ocupar a linha toda, jogando o input para baixo */
+    width: 100%;
+    max-width: 500px;
+    margin: 15px auto 0 auto; /* Centraliza a label e dá espaço no topo */
+    text-align: left;       /* Alinha o texto da label à esquerda */
     font-weight: bold;
-    color: #333;
-    display: block;
 }
 
-/* Estilo para o botão Salvar */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Centraliza todos os itens do formulário */
+    padding: 20px;
+}
+
 .button {
     background-color: #FF4500; 
     color: white;
