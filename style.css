@@ -160,9 +160,9 @@ select:focus {
 
 input[type="text"],
 input[type="datetime-local"],
-[type="date"],
-[type="number"],
-[type="password"],
+input[type="date"],
+input[type="number"],
+input[type="password"],
 select {
     width: 100%;
     /* Faz o campo ocupar toda a largura do container */
