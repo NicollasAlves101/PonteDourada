@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-    
+
 }
 
 body {
@@ -12,18 +12,18 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: linear-gradient(#FB4E37,#FDA69B);
-;
+    background-image: linear-gradient(#FB4E37, #FDA69B);
+    ;
 }
 
 
 .window-container {
-    width: 90%;             
+    width: 90%;
     max-width: 1000px;
     border: 2px solid #000;
-    padding: 20px;          
+    padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    
+
 }
 
 .window-header {
@@ -120,17 +120,19 @@ body {
 }
 
 select {
-    appearance: none; /* Remove a seta padrão */
+    appearance: none;
+    /* Remove a seta padrão */
     -webkit-appearance: none;
-    -moz-appearance: none;    
-    padding: 10px 40px 10px 15px; /* Espaço extra na direita para a nova seta */
+    -moz-appearance: none;
+    padding: 10px 40px 10px 15px;
+    /* Espaço extra na direita para a nova seta */
     border: 2px solid #e0e0e0;
     border-radius: 8px;
     background-color: #ffffff;
     background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="%23666" d="M5 7l5 5 5-5z"/></svg>');
     background-repeat: no-repeat;
     background-position: right 10px top 50%;
-    background-size: 18px;    
+    background-size: 18px;
     font-size: 16px;
     color: #333;
     cursor: pointer;
@@ -142,50 +144,65 @@ select:focus {
     box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
 }
 
-.form-group{
+.form-group {
     .form-container {
-    background-color: rgba(255, 255, 255, 0.9); /* Branco levemente transparente */
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidade */
-    max-width: 450px;
-    margin: 20px auto;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: rgba(255, 255, 255, 0.9);
+        /* Branco levemente transparente */
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        /* Sombra suave para dar profundidade */
+        max-width: 450px;
+        margin: 20px auto;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 }
 
-input[type="text"], 
-input[type="datetime-local"], [type="date"], [type="number"],[type="password"],
+input[type="text"],
+input[type="datetime-local"],
+[type="date"],
+[type="number"],
+[type="password"],
 select {
-    width: 100%;            /* Faz o campo ocupar toda a largura do container */
-    max-width: 500px;       /* Define um limite máximo para não ficar largo demais em telas grandes */
-    box-sizing: border-box; /* IMPORTANTE: garante que o padding não aumente o tamanho total do campo */    
+    width: 100%;
+    /* Faz o campo ocupar toda a largura do container */
+    max-width: 500px;
+    /* Define um limite máximo para não ficar largo demais em telas grandes */
+    box-sizing: border-box;
+    /* IMPORTANTE: garante que o padding não aumente o tamanho total do campo */
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 16px;
-    margin-top: 5px;        /* Espaço entre a label e o campo */
+    margin-top: 5px;
+    /* Espaço entre a label e o campo */
     outline: none;
 }
+
 /* Estilo para os inputs (CPF, Profissão, etc) */
 
 label {
-    display: block;         /* Faz a label ocupar a linha toda, jogando o input para baixo */
+    display: block;
+    /* Faz a label ocupar a linha toda, jogando o input para baixo */
     width: 100%;
     max-width: 500px;
-    margin: 15px auto 0 auto; /* Centraliza a label e dá espaço no topo */
-    text-align: left;       /* Alinha o texto da label à esquerda */
+    margin: 15px auto 0 auto;
+    /* Centraliza a label e dá espaço no topo */
+    text-align: left;
+    /* Alinha o texto da label à esquerda */
     font-weight: bold;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    align-items: center;    /* Centraliza todos os itens do formulário */
+    align-items: center;
+    /* Centraliza todos os itens do formulário */
     padding: 20px;
 }
 
 .button {
-    background-color: #FF4500; 
+    background-color: #FF4500;
     color: white;
     padding: 12px 24px;
     border: none;
@@ -199,15 +216,16 @@ form {
 .button:hover {
     background-color: #E63E00;
 }
-}
+
+
 .btn-login {
     background: linear-gradient(135deg, #FF4500 0%, #FF6347 100%);
-    color: white;    
+    color: white;
     padding: 12px 40px;
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
-    
+
     /* Bordas e Sombras */
     border: none;
     border-radius: 8px;
@@ -215,17 +233,20 @@ form {
     box-shadow: 0 4px 10px rgba(255, 69, 0, 0.3);
     transition: all 0.3s ease;
     display: block;
-    margin: 20px auto; 
+    margin: 20px auto;
 }
+
 .btn-login:hover {
     background: linear-gradient(135deg, #FF6347 0%, #FF4500 100%);
-    transform: translateY(-3px); /* Sobe um pouquinho */
+    transform: translateY(-3px);
+    /* Sobe um pouquinho */
     box-shadow: 0 6px 15px rgba(255, 69, 0, 0.4);
 }
 
 /* Efeito ao clicar (Active) */
 .btn-login:active {
-    transform: translateY(1px); /* Afunda levemente ao clicar */
+    transform: translateY(1px);
+    /* Afunda levemente ao clicar */
     box-shadow: 0 2px 5px rgba(255, 69, 0, 0.2);
 }
 
@@ -234,22 +255,22 @@ form {
    ========================================= */
 
 .btn-home {
-    position: absolute; 
-    top: 20px;          
-    right: 20px;        
-    z-index: 1000;      
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
     text-decoration: none;
-    transition: transform 0.3s ease; 
+    transition: transform 0.3s ease;
 }
 
 .icon-home {
-    width: 40px;        
+    width: 40px;
     height: auto;
     cursor: pointer;
-    
+
 }
 
 
 .btn-home:hover {
-    transform: scale(1.15); 
+    transform: scale(1.15);
 }
