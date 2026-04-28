@@ -154,7 +154,7 @@ select:focus {
 }
 
 input[type="text"], 
-input[type="datetime-local"], [type="date"], [type="number"],
+input[type="datetime-local"], [type="date"], [type="number"],[type=password],
 select {
     width: 100%;            /* Faz o campo ocupar toda a largura do container */
     max-width: 500px;       /* Define um limite máximo para não ficar largo demais em telas grandes */
@@ -168,16 +168,6 @@ select {
     outline: none;
 }
 /* Estilo para os inputs (CPF, Profissão, etc) */
-input [type=password] {
-    width: 60%;
-    max-width: 500px;
-    padding: 12px;
-    margin-top: 8px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    box-sizing: border-box; /* Garante que o padding não aumente o tamanho do campo */
-}
 
 label {
     display: block;         /* Faz a label ocupar a linha toda, jogando o input para baixo */
@@ -260,10 +250,6 @@ form {
     
 }
 
-
-.btn-home:hover {
-    transform: scale(1.15); 
-}
 
 .btn-home:hover {
     transform: scale(1.15); 
