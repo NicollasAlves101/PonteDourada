@@ -154,12 +154,11 @@ select:focus {
 }
 
 input[type="text"], 
-input[type="datetime-local"], [type="date"], [type="number"],[type=password],
+input[type="datetime-local"], [type="date"], [type="number"],[type="password"],
 select {
     width: 100%;            /* Faz o campo ocupar toda a largura do container */
     max-width: 500px;       /* Define um limite máximo para não ficar largo demais em telas grandes */
-    box-sizing: border-box; /* IMPORTANTE: garante que o padding não aumente o tamanho total do campo */
-    
+    box-sizing: border-box; /* IMPORTANTE: garante que o padding não aumente o tamanho total do campo */    
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 8px;
